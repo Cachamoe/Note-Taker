@@ -3,6 +3,13 @@
 ## Overview
 This is an application that can be used to write, save, and delete notes!
 
+## Acceptance Criteria
+
+Application should allow users to create and save notes.
+
+Application should allow users to view previously saved notes.
+
+Application should allow users to delete previously saved notes.
 
 ## Application Features
 1) 
@@ -11,11 +18,7 @@ This is an application that can be used to write, save, and delete notes!
 4) 
 
 ## Programs 
-<<<<<<< HEAD
-HTML, CSS, Javascript, JSON
-=======
 HTML, CSS, Javascript, Node.js, Express, JSON, Terminal
->>>>>>> 856dfb0254dbd13fd5a71a947676672179e25be8
 
 ## Author/s
 Caleb Chaney
