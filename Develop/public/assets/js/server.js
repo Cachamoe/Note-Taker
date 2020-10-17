@@ -1,6 +1,7 @@
 // Dependencies
 let express = require("express");
 let path = require("path");
+var fs = require("fs");
 
 
 // Sets up Express 
@@ -17,7 +18,7 @@ function createID() {
         return (c == 'x' ? r : (r & 0x3 | 0x8)).toString(16);
     });
     return uuid;
-}
+};
 
 console.log(createID());
 
@@ -50,5 +51,5 @@ app.delete("/api/notes/:id", function (req, res) {
 // Server Listener 
 app.listen(PORT, function () {
     console.log("App Listening" + PORT)
-})
+});
 
