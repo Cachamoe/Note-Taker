@@ -3,7 +3,7 @@
 ## Overview
 This is an application that can be used to write, save, and delete notes!
 
-Here is a link to the deployed webpage: [https://fast-refuge-39461.herokuapp.com/notes]
+Here is a link to the deployed webpage: [https://fast-refuge-39461.herokuapp.com]
 
 ## Acceptance Criteria
 
