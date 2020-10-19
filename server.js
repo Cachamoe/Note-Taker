@@ -20,8 +20,6 @@ function createID() {
     return uuid;
 };
 
-console.log(createID());
-
 // Sets up Express to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -51,7 +49,6 @@ app.post("/api/notes", function (req, res) {
         text: req.body.text,
     }
 
-
     db.push(newNote)
 
     console.log(db)
@@ -76,7 +73,6 @@ app.delete("/api/notes/:id", function (req, res) {
         res.json(db)
     })
 });
-
 
 
 // Server Listener 
