@@ -28,11 +28,11 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "./public/index.html"))
 });
 
-app.get("/notes", function(req, res) {
+app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "./public/notes.html"))
 });
 
@@ -45,26 +45,24 @@ app.get("/api/notes", function (req, res) {
 
 // Receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
 app.post("/api/notes", function (req, res) {
-    var newNote ={
-        id:  createID(),
+    let newNote = {
+        id: createID(),
         title: req.body.title,
         text: req.body.text,
     }
-    
-    
+
+
     db.push(newNote)
 
     console.log(db)
-    fs.writeFile("./db/db.json", JSON.stringify(db), function(err) {
+    fs.writeFile("./db/db.json", JSON.stringify(db), function (err) {
         if (err) throw err
         res.json(db)
     })
 });
 
 
-// Receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique 
-// `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, 
-// remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+// Receive a query parameter containing the id of a note to delete. 
 app.delete("/api/notes/:id", function (req, res) {
     console.log(req.params.id)
     for (var i = 0; i < db.length; i++) {
@@ -73,7 +71,7 @@ app.delete("/api/notes/:id", function (req, res) {
         }
     }
 
-   fs.writeFile("./db/db.json", JSON.stringify(db), function(err) {
+    fs.writeFile("./db/db.json", JSON.stringify(db), function (err) {
         if (err) throw err
         res.json(db)
     })
