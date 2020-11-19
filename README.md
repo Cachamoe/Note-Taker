@@ -19,5 +19,8 @@ Application should allow users to delete previously saved notes.
 ## Programs 
 HTML, CSS, Javascript, Node.js, Express, JSON, Terminal
 
+## License 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
 ## Author/s
 Caleb Chaney
