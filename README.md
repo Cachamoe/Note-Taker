@@ -16,7 +16,7 @@ Application should allow users to delete previously saved notes.
 ## Application Features
 1) Ability to write, save and delete notes! 
 
-## Programs 
+## Technologies 
 HTML, CSS, Javascript, Node.js, Express, JSON, Terminal
 
 ## License 
